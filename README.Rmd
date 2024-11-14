@@ -46,6 +46,12 @@ for(i in syllabi) {
 
 ## For instructors: Creating a new syllabus
 
+You can [download this repository as a zip file](https://github.com/CUNY-MSDS/Syllabi/archive/refs/heads/master.zip) or clone using the following command:
+
+```
+git clone https://github.com/CUNY-MSDS/Syllabi.git
+```
+
 The [`template`](template/) directory contains a Quarto document template along with an Excel file for the schedule. Copy the contents of the `template` folder into a folder for you class using the course number (e.g. `IS381`, `DATA606`). The frontmatter has a number of parameters that should be filled in, specifically:
 
 * `course_name` - The course number and title.
@@ -57,7 +63,7 @@ The [`template`](template/) directory contains a Quarto document template along 
 * `github` - Github username of the instructor.
 * `office_hours` - Office hours.
 
-
+The rest of the Quarto document can be editted in any plain text editor. You can use most markdown formatting. [Click here](https://daringfireball.net/projects/markdown/basics) for an introduction to markdown. RStudio has a visual editor as well.
 
 To build the course syllabus you can click the `Render` button in RStudio. Or run the following command from the terminal:
 

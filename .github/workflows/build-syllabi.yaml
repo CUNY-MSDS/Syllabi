@@ -46,3 +46,4 @@ jobs:
         with:
           clean: false
           branch: master
+          folder: /

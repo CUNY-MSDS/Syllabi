@@ -13,6 +13,7 @@ editor_options:
 # Course Syllabi for CUNY Data Science and Information Systems
 
 ```{r, echo=FALSE, results = 'asis'}
+# This will build a table of contents linking to all the syllabi
 syllabi <- c(list.files('.', pattern = 'IS*'), 
 			 list.files('.', pattern = 'DATA*'))
 
@@ -40,7 +41,6 @@ for(i in syllabi) {
 		cat(entry)
 	}
 }
-
 ```
 
 
@@ -48,11 +48,18 @@ for(i in syllabi) {
 
 You can [download this repository as a zip file](https://github.com/CUNY-MSDS/Syllabi/archive/refs/heads/master.zip) or clone using the following command:
 
-```
+```console
 git clone https://github.com/CUNY-MSDS/Syllabi.git
 ```
 
-The [`template`](template/) directory contains a Quarto document template along with an Excel file for the schedule. Copy the contents of the `template` folder into a folder for you class using the course number (e.g. `IS381`, `DATA606`). The frontmatter has a number of parameters that should be filled in, specifically:
+The [`template`](template/) directory contains a Quarto document template along with an Excel file for the schedule. Copy the contents of the `template` folder into a folder for you class using the course number (e.g. `IS381`, `DATA606`). Or run the following command in the terminal:
+
+```console
+cp -r template IS382
+mv IS382/syllabus_template.qmd IS382/IS382.qmd
+```
+
+The frontmatter has a number of parameters that should be filled in, specifically:
 
 * `course_name` - The course number and title.
 * `semester` - The semester for this syllabus.
@@ -71,5 +78,5 @@ To build the course syllabus you can click the `Render` button in RStudio. Or ru
 quarto render IS381/IS381.qmd --to pdf
 ```
 
-Note that whenever a change is made to the repository a [Github action](https://github.com/CUNY-MSDS/Syllabi/actions) will automatically build a PDF of the syllabus and update this README file to include links to the available syllabi.
+Note that whenever a change is made to the repository a [Github action](https://github.com/CUNY-MSDS/Syllabi/actions) will automatically build a PDF of the syllabus and update this README file to include links to the available syllabi. Therefore changes can be made directly to the `qmd` files using the editor feature of Github.
 

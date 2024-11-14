@@ -7,8 +7,9 @@ status](https://github.com/CUNY-MSDS/Syllabi/workflows/build-syllabi/badge.svg)]
 
 # Course Syllabi for CUNY Data Science and Information Systems
 
-IS381 Statistics and Probability with R ([source](IS381/IS381.qmd))IS
-382 – Predictive Modeling ([source](IS382/IS382.qmd))
+- [IS381 Statistics and Probability with R](IS381/IS381.pdf)
+  ([source](IS381/IS381.qmd))\* [IS 382 – Predictive
+  Modeling](IS382/IS382.pdf) ([source](IS382/IS382.qmd))
 
 ## For instructors: Creating a new syllabus
 
@@ -34,14 +35,14 @@ mv IS382/syllabus_template.qmd IS382/IS382.qmd
 The frontmatter has a number of parameters that should be filled in,
 specifically:
 
-  - `course_name` - The course number and title.
-  - `semester` - The semester for this syllabus.
-  - `credits` - Credits hours.
-  - `instructor` - Instructor name.
-  - `prerequisites` - Course prerequisites.
-  - `email` - Email address of the instructor.
-  - `github` - Github username of the instructor.
-  - `office_hours` - Office hours.
+- `course_name` - The course number and title.
+- `semester` - The semester for this syllabus.
+- `credits` - Credits hours.
+- `instructor` - Instructor name.
+- `prerequisites` - Course prerequisites.
+- `email` - Email address of the instructor.
+- `github` - Github username of the instructor.
+- `office_hours` - Office hours.
 
 The rest of the Quarto document can be editted in any plain text editor.
 You can use most markdown formatting. [Click

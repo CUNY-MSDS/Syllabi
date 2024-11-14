@@ -63,10 +63,13 @@ The [`template`](template/) directory contains a Quarto document template along 
 * `github` - Github username of the instructor.
 * `office_hours` - Office hours.
 
-The rest of the Quarto document can be editted in any plain text editor. You can use most markdown formatting. [Click here](https://daringfireball.net/projects/markdown/basics) for an introduction to markdown. RStudio has a visual editor as well.
+The rest of the Quarto document can be editted in any plain text editor. You can use most markdown formatting. [Click here](https://daringfireball.net/projects/markdown/basics) for an introduction to markdown. RStudio has a visual editor as well. Note that there a number of `include` commands that import sections required in every syllabus (please do not edit any files in the [`common`](common/) directory).
 
 To build the course syllabus you can click the `Render` button in RStudio. Or run the following command from the terminal:
 
 ```console
 quarto render IS381/IS381.qmd --to pdf
 ```
+
+Note that whenever a change is made to the repository a [Github action](https://github.com/CUNY-MSDS/Syllabi/actions) will automatically build a PDF of the syllabus and update this README file to include links to the available syllabi.
+

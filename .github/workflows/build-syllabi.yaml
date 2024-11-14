@@ -40,10 +40,11 @@ jobs:
       - name: Build site
         run: Rscript -e 'source("build.R")'
 
-      - name: Deploy wasm R packages to GitHub pages 🚀
-        if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          clean: false
-          branch: master
-          folder: /
+      - name: Commit syllabi
+        run: |
+          git config --global user.name 'Jason Bryer'
+          git config --global user.email 'jbryer@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git commit -am "Automated build of syllabi"
+          git push
+  

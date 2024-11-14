@@ -8,7 +8,6 @@ editor_options:
 knitr::include_graphics('../images/sps_logo.jpg')
 ```
 
-
 **COURSE NAME AND NUMBER:** IS381 Statistics and Probability with R  
 **CREDITS:** 3  
 **PREREQUISITE(S):** IS 210, IS 211, IS 361 AND IS 362  

@@ -1,0 +1,55 @@
+---
+output:
+  github_document:
+    html_preview: false
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- badges: start -->
+`r badger::badge_github_actions("CUNY-MSDS/Syllabi", action = "build-syllabi")`
+<!-- badges: end -->
+
+# Course Syllabi for CUNY Data Science and Information Systems
+
+
+```{r, echo=FALSE, results = 'asis'}
+syllabi <- c(list.files('.', pattern = 'IS*'), 
+			 list.files('.', pattern = 'DATA*'))
+
+for(i in syllabi) {
+	qmd_files <- list.files(i, pattern = "*.qmd")
+	for(qmd in qmd_files) {
+		entry <- ''
+		pdf_file <- paste0(i, '/', tools::file_path_sans_ext(qmd), '.pdf')
+		qmd_file <- paste0(i, '/', tools::file_path_sans_ext(qmd), '.qmd')
+		
+		if(file.exists(qmd_file)) {
+			name <- tools::file_path_sans_ext(qmd)
+			tryCatch({
+				meta <- quarto::quarto_inspect(qmd_file)
+				name <- meta$formats$pdf$metadata$params$course_name
+			}, error = function(e) { })
+			
+			if(file.exists(pdf_file)) {
+				entry <- paste0('* [', name, '](', pdf_file, ')')
+			} else {
+				entry <- name
+			}
+			entry <- paste0(entry, ' ([source](', qmd_file, '))')
+		}
+		cat(entry)
+	}
+}
+
+```
+
+
+
+## For instructors: Creating a new syllabus
+
+To build the course syllabus you can click the `Render` button in RStudio. Or run the following command from the terminal:
+
+```console
+quarto render IS381/IS381.qmd --to pdf
+```

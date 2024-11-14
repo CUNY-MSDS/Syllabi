@@ -2,22 +2,31 @@
 format: pdf
 editor_options: 
   chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+params: 
+  course_name: "IS381 Statistics and Probability with R"
+  credits: "3"
+  instructor: ""
+  prerequisites: "IS 210, IS 211, IS 361 AND IS 362"
+  email: ""
+  github: ""
+  office_hours: ""
 ---
 
 ```{r, echo=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics('../images/sps_logo.jpg')
 ```
 
-**COURSE NAME AND NUMBER:** IS381 Statistics and Probability with R  
-**CREDITS:** 3  
-**PREREQUISITE(S):** IS 210, IS 211, IS 361 AND IS 362  
-**REQUIRED**
+**COURSE NAME AND NUMBER:** `r params$course_name`  
+**CREDITS:** `r params$credits`  
+**PREREQUISITE(S):** `r params$prerequisites`  
 
-**INSTRUCTOR:**  
-**EMAIL:**  
-**GITHUB:**  
-**OFFICE HOURS:** 
-
+**INSTRUCTOR:** `r params$instructor`  
+**EMAIL:** `r params$email`  
+**GITHUB:** `r params$github`  
+**OFFICE HOURS:** `r params$office_hours`
 
 ### COURSE DESCRIPTION:
 
@@ -25,78 +34,66 @@ This course covers basic techniques in probability and statistics applied using 
 
 ### PROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:
 
-1.	Describe how information is collected, stored, managed, classified, retrieved, and disseminated						
-2.	Analyze data to solve problems in practical scenarios
-3.	Apply skills used to program applications, manage systems, and protect data in complex/heterogeneous computing environments 
-4.	Apply analytical and statistical methods to retrieve, manipulate, analyze, and visualize data for decision-making 		
+1.  Describe how information is collected, stored, managed, classified, retrieved, and disseminated\
+2.  Analyze data to solve problems in practical scenarios
+3.  Apply skills used to program applications, manage systems, and protect data in complex/heterogeneous computing environments
+4.  Apply analytical and statistical methods to retrieve, manipulate, analyze, and visualize data for decision-making
 
 ### COURSE LEARNING OUTCOMES:
 
-1.	Effectively use R for conducting analysis, creating reports, and presenting results
-2.	Estimate predictive models using both parametric and non-parametric models.
-3.	Communicate the accuracy of predictive models using a variety of fit statistics
-4.	Have strategies for handling missing data in the predictive modeling pipeline.
-5.	Effectively communicate the results of a predictive models
-
+1.  Effectively use R for conducting analysis, creating reports, and presenting results
+2.  Estimate predictive models using both parametric and non-parametric models.
+3.  Communicate the accuracy of predictive models using a variety of fit statistics
+4.  Have strategies for handling missing data in the predictive modeling pipeline.
+5.  Effectively communicate the results of a predictive models
 
 ### STUDENTS WILL BE ABLE TO:
 
-•	Effectively use R for conducting analysis, creating reports, and presenting results.
-•	Understand the foundations of probability theory and perform basic probability calculations.
-•	Build basic stochastic models for commonly encountered data science.
-•	Explore and summarize data using descriptive statistics.
-•	Test hypotheses using classical and modern computational techniques.
-•	Calculate and define the relationship between multiple variables.
+* Effectively use R for conducting analysis, creating reports, and presenting results. 
+* Understand the foundations of probability theory and perform basic probability calculations.
+* Build basic stochastic models for commonly encountered data science.
+* Explore and summarize data using descriptive statistics.
+* Test hypotheses using classical and modern computational techniques.
+* Calculate and define the relationship between multiple variables.
 
 ### REQUIRED TEXTBOOKS:
 
-REQUIRED TEXTBOOKS:
+*Introduction to Modern Statistics* by Mine Çetinkaya-Rundel and Johanna Hardin. Available for free at https://openintro-ims.netlify.app
 
-Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin. Available for free at https://openintro-ims.netlify.app
-
-R for Data Science 2nd edition by Hadley Wickham, Mine Çetinkaya-Runde, and Garrett Grolemund. Available for free at. https://r4ds.hadley.nz
-
+*R for Data Science 2nd edition* by Hadley Wickham, Mine Çetinkaya-Runde, and Garrett Grolemund. Available for free at. https://r4ds.hadley.nz
 
 ### ADDITIONAL RESOURCES:
 
-•	R Software – Download from https://cran.r-project.org
-•	RStudio Desktop – Download from https://posit.co/downloads/
-•	Windows users should also download and install RTools from https://cran.r-project.org/bin/windows/Rtools/
-•	Mac users should also download and install Xcode and gfortran. Directions are available here: https://mac.r-project.org/tools/
-
+* R Software – Download from https://cran.r-project.org
+* RStudio Desktop – Download from https://posit.co/downloads/
+* Windows users should also download and install RTools from https://cran.r-project.org/bin/windows/Rtools/
+* Mac users should also download and install Xcode and gfortran. Directions are available here: https://mac.r-project.org/tools/
 
 ### ASSIGNMENTS AND GRADING:
 
-Data Project (35% Total; Proposal [15%], Final Presentation [20%)])
+**Data Project** (35% Total; Proposal 15%, Final Presentation 20%)
 
-The purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final report. The outline for each of these are provided in the templates. When submitting the assignments, include the R Markdown file (change the name to include your last name, for example Bryer-Proposal.Rmd and Bryer-Project.Rmd) along with any supplementary files necessary to run the R Markdown file (e.g. data files, screenshots, etc.). Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data. Projects will be shared with others on this website, so they should be presented in a way that other students can reproduce your analysis.
+The purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final report. The outline for each of these are provided in the templates. When submitting the assignments, include the R Markdown file (change the name to include your last name, for example LASTNAME-Proposal.Rmd and LASTNAME-Project.Rmd) along with any supplementary files necessary to run the R Markdown file (e.g. data files, screenshots, etc.). Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data. Projects will be shared with others on this website, so they should be presented in a way that other students can reproduce your analysis.
 
-Homework Problems (20%, 2.5 points each):
+**Homework Problems** (20%, 2.5 points each): This assignment aims to provide an opportunity for you to actively engage in the content you are learning in class. Homework problems are associated with each class topic (see Course Outline) and must be completed once a topic has been covered in class. Each homework assignment will include 5-10 questions that are carefully selected from the textbook. The answers to some of these questions can be found in the back of the textbook – these are good “self-check” questions to ensure you are on the right track. Assignments are graded based on completion, accuracy, and thoroughness; that means you must show your work. Doing so will help us understand where potential misunderstandings lie.
 
-This assignment aims to provide an opportunity for you to actively engage in the content you are learning in class. Homework problems are associated with each class topic (see Course Outline) and must be completed once a topic has been covered in class. Each homework assignment will include 5-10 questions that are carefully selected from the textbook. The answers to some of these questions can be found in the back of the textbook – these are good “self-check” questions to ensure you are on the right track. Assignments are graded based on completion, accuracy, and thoroughness; that means you must show your work. Doing so will help us understand where potential misunderstandings lie.
+**Labs** (25%, 5 points each): R is the statistical software you will use for this course. The labs aim to provide an opportunity for you to apply your statistical content knowledge in the context of problems to solve in R, thus also providing you the opportunity to practice and become familiar with the R platform and language. The labs will be guided; thus, step-by-step procedures will be laid out for you to follow in order to get the desired outputs. Interpretations of results are just as important as the results themselves, so once you have the results, interpret them in the context of the problems. Labs are graded based on completion, accuracy, and thoroughness of results and interpretations.
 
-Labs (25%, 5 points each): R is the statistical software you will use for this course. The labs aim to provide an opportunity for you to apply your statistical content knowledge in the context of problems to solve in R, thus also providing you the opportunity to practice and become familiar with the R platform and language. The labs will be guided; thus, step-by-step procedures will be laid out for you to follow in order to get the desired outputs. Interpretations of results are just as important as the results themselves, so once you have the results, interpret them in the context of the problems. Labs are graded based on completion, accuracy, and thoroughness of results and interpretations.
+**Final Exam** (10%): Exams will consist of conceptual, computational, and application questions, an include a combination of multiple choice, short response questions, as well as a data analysis task. The exams will focus on the material covered during the course of the semester. More detail will be provided about the material assessed by each exam closer in time to the actual exams. It should be noted that most of the statistical skills acquired during this class are constantly building upon earlier learning. This means that even though each exam will focus on the preceding section of the course, students might need to recall skills learned in earlier sections.
 
-Final Exam (10%): Exams will consist of conceptual, computational, and application questions, an include a combination of multiple choice, short response questions, as well as a data analysis task. The exams will focus on the material covered during the course of the semester. More detail will be provided about the material assessed by each exam closer in time to the actual exams. It should be noted that most of the statistical skills acquired during this class are constantly building upon earlier learning. This means that even though each exam will focus on the preceding section of the course, students might need to recall skills learned in earlier sections.
+**Participation** (10%): While attendance at synchronous meetups is not required, it is highly encouraged that you do attend: this is where you can ask questions, participate in-situ, and engage with your professor and peers. In addition, announcements and updates relating to coursework will be reviewed during these meetups. With that said, we understand that extenuating circumstances might not allow some of you to attend. Thus, we have built-in diagnostic and weekly formative assessment assignments that will give us an understanding of your current level of knowledge and lingering gaps in knowledge to be completed after attending or watching the recording of every meetup:
 
-Participation (10%): While attendance at synchronous meetups is not required, it is highly encouraged that you do attend: this is where you can ask questions, participate in-situ, and engage with your professor and peers. In addition, announcements and updates relating to coursework will be reviewed during these meetups. 
-
-With that said, we understand that extenuating circumstances might not allow some of you to attend. Thus, we have built-in diagnostic and weekly formative assessment assignments that will give us an understanding of your current level of knowledge and lingering gaps in knowledge to be completed after attending or watching the recording of every meetup:
-
-1.	DAACS SRL (https://cuny.daacs.net) and Google Form (only once, at the beginning of the semester)
-2.	Weekly One-Minute Papers
+1.  DAACS SRL (https://cuny.daacs.net) and Google Form (only once, at the beginning of the semester)
+2.  Weekly One-Minute Papers
 
 You will receive full points upon completion of each of these assignments.
 
-### LEARNING ASSESSMENTS:
+```{r, echo=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+schedule <- readxl::read_excel('assignments.xlsx')
+knitr::kable(schedule, row.names = FALSE, )
+```
 
-Course Assignments	Points or Percentage of Final Grade
-Participation/ Weekly Formative Assessments	10%
-Project Proposal	15%
-Final Project Presentation	20%
-Homework	20%
-Labs	25%
-Final Exam	10%
 
 {{< include ../common/grading_scale_undergrad.qmd >}}
 
@@ -110,7 +107,6 @@ schedule <- readxl::read_excel('schedule.xlsx')
 knitr::kable(schedule, row.names = FALSE, )
 ```
 
-
 {{< include ../common/accessibility.qmd >}}
 
 {{< include ../common/online_ediquette.qmd >}}
@@ -118,5 +114,3 @@ knitr::kable(schedule, row.names = FALSE, )
 {{< include ../common/academic_integrity.qmd >}}
 
 {{< include ../common/support_services.qmd >}}
-
-

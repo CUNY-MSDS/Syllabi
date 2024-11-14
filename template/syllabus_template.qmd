@@ -2,22 +2,31 @@
 format: pdf
 editor_options: 
   chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+params: 
+  course_name: ""
+  credits: "3"
+  instructor: ""
+  prerequisites: ""
+  email: ""
+  github: ""
+  office_hours: ""
 ---
 
 ```{r, echo=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics('../images/sps_logo.jpg')
 ```
 
+**COURSE NAME AND NUMBER:** `r params$course_name`  
+**CREDITS:** `r params$credits`  
+**PREREQUISITE(S):** `r params$prerequisites`  
 
-**COURSE NAME AND NUMBER:**  
-**CREDITS:** 3  
-**PREREQUISITE(S):**  
-**REQUIRED**
-
-**INSTRUCTOR:**  
-**EMAIL:**  
-**GITHUB:**  
-**OFFICE HOURS:** 
+**INSTRUCTOR:** `r params$instructor`  
+**EMAIL:** `r params$email`  
+**GITHUB:** `r params$github`  
+**OFFICE HOURS:** `r params$office_hours`
 
 
 ### COURSE DESCRIPTION:

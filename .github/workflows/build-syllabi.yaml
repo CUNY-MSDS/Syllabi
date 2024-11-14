@@ -24,10 +24,10 @@ jobs:
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-          env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            tinytex: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tinytex: true
             
       - name: Install R
         uses: r-lib/actions/setup-r@v2

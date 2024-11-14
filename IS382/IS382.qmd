@@ -6,7 +6,7 @@ editor:
   markdown: 
     wrap: 72
 params: 
-  course_name: "IS 382 – Predictive Modeling"
+  course_name: "IS382 Predictive Modeling"
   semester: ""
   credits: "3"
   instructor: ""
@@ -32,6 +32,8 @@ knitr::include_graphics('../images/sps_logo.jpg')
 
 
 ### COURSE DESCRIPTION:
+
+This course covers the development of predictive models using the R statistical programming language. Topics cover parametric (e.g. regression), non-parametric (e.g. classification and regression trees), and Bayesian models for predicting quantitative and qualitative outcomes. 
 
 ### PROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:
 

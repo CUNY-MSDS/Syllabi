@@ -34,10 +34,11 @@ for(i in syllabi) {
 			if(file.exists(pdf_file)) {
 				entry <- paste0('* [', name, '](', pdf_file, ')')
 			} else {
-				entry <- name
+				entry <- paste0('* ', name)
 			}
 			entry <- paste0(entry, ' ([source](', qmd_file, '))')
 		}
+		entry <- paste0(entry, '\n')
 		cat(entry)
 	}
 }

@@ -40,11 +40,8 @@ jobs:
       - name: Build site
         run: Rscript -e 'source("build.R")'
 
-      - name: Commit syllabi
-        run: |
-          git config --global user.name 'Jason Bryer'
-          git config --global user.email 'jbryer@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
-          git commit -am "Automated build of syllabi"
-          git push
-  
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Update automatically built syllabi

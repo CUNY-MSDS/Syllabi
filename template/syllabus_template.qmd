@@ -1,0 +1,59 @@
+---
+format: pdf
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics('../images/sps_logo.jpg')
+```
+
+
+**COURSE NAME AND NUMBER:**  
+**CREDITS:** 3  
+**PREREQUISITE(S):**  
+**REQUIRED**
+
+**INSTRUCTOR:**  
+**EMAIL:**  
+**GITHUB:**  
+**OFFICE HOURS:** 
+
+
+### COURSE DESCRIPTION:
+
+### PROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:
+
+### COURSE LEARNING OUTCOMES:
+
+### HOW IS THIS COURSE RELEVANT FOR IS PROFESSIONALS?
+
+### REQUIRED TEXTBOOKS:
+
+### ADDITIONAL RESOURCES:
+
+### ASSIGNMENTS AND GRADING:
+
+### LEARNING ASSESSMENTS:
+
+{{< include ../common/grading_scale_undergrad.qmd >}}
+
+### COURSE OUTLINE AND SCHEDULE
+
+*Subject to change*
+
+```{r, echo=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+schedule <- readxl::read_excel('schedule.xlsx')
+knitr::kable(schedule, row.names = FALSE, )
+```
+
+
+{{< include ../common/accessibility.qmd >}}
+
+{{< include ../common/online_ediquette.qmd >}}
+
+{{< include ../common/academic_integrity.qmd >}}
+
+{{< include ../common/support_services.qmd >}}
+

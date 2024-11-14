@@ -48,13 +48,14 @@ for(i in syllabi) {
 
 The [`template`](template/) directory contains a Quarto document template along with an Excel file for the schedule. Copy the contents of the `template` folder into a folder for you class using the course number (e.g. `IS381`, `DATA606`). The frontmatter has a number of parameters that should be filled in, specifically:
 
-* course_name
-* credits
-* instructor
-* prerequisites
-* email
-* github
-* office_hours
+* `course_name` - The course number and title.
+* `semester` - The semester for this syllabus.
+* `credits` - Credits hours.
+* `instructor` - Instructor name.
+* `prerequisites` - Course prerequisites.
+* `email` - Email address of the instructor.
+* `github` - Github username of the instructor.
+* `office_hours` - Office hours.
 
 
 

@@ -34,8 +34,8 @@ jobs:
       - name: Install R Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::pak, any::devtools, any::tidyverse, any::rmarkdown, any::quarto, any::readxl, any::badger
-          needs: website
+          cache-version: 2
+          packages: any::tidyverse, any::rmarkdown, any::quarto, any::readxl, any::badger
 
       - name: Build site
         run: Rscript -e 'source("build.R")'

@@ -7,6 +7,7 @@ editor:
     wrap: 72
 params: 
   course_name: ""
+  semester: ""
   credits: "3"
   instructor: ""
   prerequisites: ""
@@ -20,6 +21,7 @@ knitr::include_graphics('../images/sps_logo.jpg')
 ```
 
 **COURSE NAME AND NUMBER:** `r params$course_name`  
+**SEMSTER:** `r params$semester`  
 **CREDITS:** `r params$credits`  
 **PREREQUISITE(S):** `r params$prerequisites`  
 

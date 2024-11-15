@@ -6,7 +6,8 @@ editor:
   markdown: 
     wrap: 72
 params: 
-  course_name: "IS382 Predictive Modeling"
+  course_number: "IS382"
+  course_name: "Predictive Modeling"
   semester: ""
   credits: "3"
   instructor: ""
@@ -18,9 +19,10 @@ params:
 
 ```{r, echo=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics('../images/sps_logo.jpg')
+source('../common/functions.R')
 ```
 
-**COURSE NAME AND NUMBER:** `r params$course_name`  
+**COURSE NAME AND NUMBER:** `r paste0(params$course_number, ' ', params$course_name)`  
 **SEMSTER:** `r params$semester`  
 **CREDITS:** `r params$credits`  
 **PREREQUISITE(S):** `r params$prerequisites`  
@@ -37,10 +39,10 @@ This course covers the development of predictive models using the R statistical 
 
 ### PROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:
 
-1.	Describe how information is collected, stored, managed, classified, retrieved, and disseminated
-2.	Analyze data to solve problems in practical scenarios 
-3.	Apply skills used to program applications, manage systems, and protect data in complex/heterogeneous computing environments  
-4.	Apply analytical and statistical methods to retrieve, manipulate, analyze, and visualize data for decision-making 
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE}
+cat(program_learning_outcomes(params$course_number))
+```
+
 
 ### COURSE LEARNING OUTCOMES:
 
@@ -50,7 +52,6 @@ This course covers the development of predictive models using the R statistical 
 4.	Have strategies for handling missing data in the predictive modeling pipeline. 
 5.	Effectively communicate the results of a predictive models. 
 
-### HOW IS THIS COURSE RELEVANT FOR IS PROFESSIONALS?
 
 ### REQUIRED TEXTBOOKS:
 
@@ -108,7 +109,7 @@ knitr::kable(schedule, row.names = FALSE, )
 
 ```{r, echo=FALSE, results='asis'}
 options(knitr.kable.NA = '')
-schedule <- readxl::read_excel('schedule.xlsx')
+schedule <- readxl::read_excel('IS382_schedule.xlsx')
 knitr::kable(schedule, row.names = FALSE, )
 ```
 

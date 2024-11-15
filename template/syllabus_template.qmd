@@ -6,6 +6,7 @@ editor:
   markdown: 
     wrap: 72
 params: 
+  course_number: ""
   course_name: ""
   semester: ""
   credits: "3"
@@ -18,9 +19,10 @@ params:
 
 ```{r, echo=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics('../images/sps_logo.jpg')
+source('../common/functions.R')
 ```
 
-**COURSE NAME AND NUMBER:** `r params$course_name`  
+**COURSE NAME AND NUMBER:** `r paste0(params$course_number, ' ', params$course_name)`  
 **SEMSTER:** `r params$semester`  
 **CREDITS:** `r params$credits`  
 **PREREQUISITE(S):** `r params$prerequisites`  
@@ -33,21 +35,34 @@ knitr::include_graphics('../images/sps_logo.jpg')
 
 ### COURSE DESCRIPTION:
 
+
 ### PROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE}
+cat(program_learning_outcomes(params$course_number))
+```
+
 
 ### COURSE LEARNING OUTCOMES:
 
+
 ### HOW IS THIS COURSE RELEVANT FOR IS PROFESSIONALS?
+
 
 ### REQUIRED TEXTBOOKS:
 
+
 ### ADDITIONAL RESOURCES:
+
 
 ### ASSIGNMENTS AND GRADING:
 
+
 ### LEARNING ASSESSMENTS:
 
+
 {{< include ../common/grading_scale_undergrad.qmd >}}
+
 
 ### COURSE OUTLINE AND SCHEDULE
 

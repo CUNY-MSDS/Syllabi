@@ -7,10 +7,9 @@ status](https://github.com/CUNY-MSDS/Syllabi/workflows/build-syllabi/badge.svg)]
 
 # Course Syllabi for CUNY Data Science and Information Systems
 
-  - [IS381 Statistics and Probability with R](IS381/IS381.pdf)
+  - [Statistics and Probability with R](IS381/IS381.pdf)
     ([source](IS381/IS381.qmd))
-  - [IS382 Predictive Modeling](IS382/IS382.pdf)
-    ([source](IS382/IS382.qmd))
+  - [Predictive Modeling](IS382/IS382.pdf) ([source](IS382/IS382.qmd))
 
 ## For instructors: Creating a new syllabus
 

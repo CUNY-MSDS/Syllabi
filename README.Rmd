@@ -45,7 +45,14 @@ for(i in syllabi) {
 ```
 
 
-## For instructors: Creating a new syllabus
+## For instructors
+
+### Editing a syllabus
+
+If a syllabus already exists for your course you can navigate to the `qmd` file and click the edit button (top right) and make any edits on the Github website. Changes to the schedule (or any other Excel files) need to be done locally and then the file can be uploaded to the correct folder. This repo has a [Github action](https://github.com/CUNY-MSDS/Syllabi/actions) that will automatically rebuild PDF files after each change.
+
+
+### Creating a new syllabus
 
 You can [download this repository as a zip file](https://github.com/CUNY-MSDS/Syllabi/archive/refs/heads/master.zip) or clone using the following command:
 
@@ -62,7 +69,8 @@ mv IS382/syllabus_template.qmd IS382/IS382.qmd
 
 The frontmatter has a number of parameters that should be filled in, specifically:
 
-* `course_name` - The course number and title.
+* `course_number` - The course number. This should start with either `IS` (undergraduate) or `DATA` (graduate) followed by the three digit number, no spaces.
+* `course_name` - The course title.
 * `semester` - The semester for this syllabus.
 * `credits` - Credits hours.
 * `instructor` - Instructor name.

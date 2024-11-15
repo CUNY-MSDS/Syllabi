@@ -7,12 +7,23 @@ status](https://github.com/CUNY-MSDS/Syllabi/workflows/build-syllabi/badge.svg)]
 
 # Course Syllabi for CUNY Data Science and Information Systems
 
-  - [IS381 Statistics and Probability with R](IS381/IS381.pdf)
-    ([source](IS381/IS381.qmd))
-  - [IS382 Predictive Modeling](IS382/IS382.pdf)
-    ([source](IS382/IS382.qmd))
+- [Statistics and Probability with R](IS381/IS381.pdf)
+  ([source](IS381/IS381.qmd))
+- [Predictive Modeling](IS382/IS382.pdf) ([source](IS382/IS382.qmd))
 
-## For instructors: Creating a new syllabus
+## For instructors
+
+### Editing a syllabus
+
+If a syllabus already exists for your course you can navigate to the
+`qmd` file and click the edit button (top right) and make any edits on
+the Github website. Changes to the schedule (or any other Excel files)
+need to be done locally and then the file can be uploaded to the correct
+folder. This repo has a [Github
+action](https://github.com/CUNY-MSDS/Syllabi/actions) that will
+automatically rebuild PDF files after each change.
+
+### Creating a new syllabus
 
 You can [download this repository as a zip
 file](https://github.com/CUNY-MSDS/Syllabi/archive/refs/heads/master.zip)
@@ -36,14 +47,17 @@ mv IS382/syllabus_template.qmd IS382/IS382.qmd
 The frontmatter has a number of parameters that should be filled in,
 specifically:
 
-  - `course_name` - The course number and title.
-  - `semester` - The semester for this syllabus.
-  - `credits` - Credits hours.
-  - `instructor` - Instructor name.
-  - `prerequisites` - Course prerequisites.
-  - `email` - Email address of the instructor.
-  - `github` - Github username of the instructor.
-  - `office_hours` - Office hours.
+- `course_number` - The course number. This should start with either
+  `IS` (undergraduate) or `DATA` (graduate) followed by the three digit
+  number, no spaces.
+- `course_name` - The course title.
+- `semester` - The semester for this syllabus.
+- `credits` - Credits hours.
+- `instructor` - Instructor name.
+- `prerequisites` - Course prerequisites.
+- `email` - Email address of the instructor.
+- `github` - Github username of the instructor.
+- `office_hours` - Office hours.
 
 The rest of the Quarto document can be editted in any plain text editor.
 You can use most markdown formatting. [Click

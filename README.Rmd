@@ -28,7 +28,7 @@ for(i in syllabi) {
 			name <- tools::file_path_sans_ext(qmd)
 			tryCatch({
 				meta <- quarto::quarto_inspect(qmd_file)
-				name <- meta$formats$pdf$metadata$params$course_name
+				name <- paste0(name, ' ', meta$formats$pdf$metadata$params$course_name)
 			}, error = function(e) { })
 			
 			if(file.exists(pdf_file)) {
@@ -44,6 +44,15 @@ for(i in syllabi) {
 }
 ```
 
+## Program Learning Outcomes
+
+```{r, echo=FALSE}
+plo <- readxl::read_excel('common/PLOs.xlsx', sheet = 'PLO')
+plo_mapping <- readxl::read_excel('common/PLOs.xlsx', sheet = 'Mapping')
+for(i in seq_len(nrow(plo))) {
+	cat(paste0('* **', plo[i,]$ID, '** ', plo[i,]$Learning_Outcome, '\n'))
+}
+```
 
 ## For instructors
 

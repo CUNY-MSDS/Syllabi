@@ -46,7 +46,7 @@ for(i in syllabi) {
 
 ## Program Learning Outcomes
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, results='asis'}
 plo <- readxl::read_excel('common/PLOs.xlsx', sheet = 'PLO')
 plo_mapping <- readxl::read_excel('common/PLOs.xlsx', sheet = 'Mapping')
 for(i in seq_len(nrow(plo))) {

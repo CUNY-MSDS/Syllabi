@@ -8,9 +8,9 @@ editor:
 params:
   course_number: "IS381"
   course_name: "Statistics and Probability with R"
-  semester: ""
+  semester: "Fall 2025"
   credits: "3"
-  instructor: ""
+  instructor: "Jason Bryer"
   prerequisites: "IS 210, IS 211, IS 361 AND IS 362"
   email: ""
   github: ""

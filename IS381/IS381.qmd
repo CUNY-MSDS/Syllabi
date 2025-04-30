@@ -42,7 +42,6 @@ This course covers basic techniques in probability and statistics applied using 
 cat(program_learning_outcomes(params$course_number))
 ```
 
-
 ### COURSE LEARNING OUTCOMES:
 
 1.  Effectively use R for conducting analysis, creating reports, and presenting results
